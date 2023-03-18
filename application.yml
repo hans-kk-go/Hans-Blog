@@ -1,0 +1,33 @@
+server:
+  port: 7777
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sg_blog
+    username: root
+    password: root
+#  main:
+#    banner-mode: off
+
+  mvc:
+    servlet:
+      load-on-startup: 1
+
+
+
+
+
+#//开启mp的日志，这个日志是输出到控制台的日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  global-config:
+#    banner: false
+    db-config:
+      id-type: assign_id
+
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+
